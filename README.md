@@ -1,4 +1,4 @@
-# 🚀 Source Prediction AI (DistilBERT + ONNX + Streamlit)
+# Source Prediction AI (DistilBERT + ONNX + Streamlit)
 
 This project is an end-to-end, production-ready Machine Learning system designed to predict the source or author (e.g., Obama, Trump, Hemingway, etc.) of a given text. 
 
@@ -6,16 +6,16 @@ The system features a **DistilBERT** model fine-tuned for sequence classificatio
 
 ---
 
-### 🌐 Live Deployment
+###  Live Deployment
 
 The system is fully containerized (Docker) and hosted on Hugging Face Spaces.
 
 * **Interactive Web App:** Test the model in real-time here:  
-  👉 **[https://kubraguzel-source-predictor-api.hf.space](https://kubraguzel-source-predictor-api.hf.space)**
+   **[https://kubraguzel-source-predictor-api.hf.space](https://kubraguzel-source-predictor-api.hf.space)**
 
 ---
 
-### 🧠 Technical Approaches & Methodology
+###  Technical Approaches & Methodology
 
 #### 1. Solving Data Leakage: Mathematical Clustering
 * **The Challenge:** In the raw dataset, consecutive paragraphs from the same original document (e.g., a single speech) created a high risk of **Data Leakage**. A random `train_test_split` would allow the model to "memorize" specific documents rather than learning general authorial styles.
@@ -34,18 +34,18 @@ The system is fully containerized (Docker) and hosted on Hugging Face Spaces.
 
 ---
 
-### 📊 Model Performance Analysis (Validation Set)
+###  Model Performance Analysis (Validation Set)
 
 The following metrics represent the final evaluation of the **ONNX-optimized DistilBERT** model on the held-out validation set.
 
-#### 📈 Global Metrics
+####  Global Metrics
 | Metric | Value |
 | :--- | :---: |
 | **Overall Accuracy** | **90.32%** |
 | **Macro F1-Score** | **89.18%** |
 | **Weighted F1-Score** | **90.11%** |
 
-#### 📝 Detailed Classification Report
+####  Detailed Classification Report
 | Class | Precision | Recall | F1-Score | Support |
 | :--- | :---: | :---: | :---: | :---: |
 | **blog11518** | 0.98 | 0.97 | 0.98 | 588 |
@@ -65,7 +65,7 @@ The following metrics represent the final evaluation of the **ONNX-optimized Dis
 
 ---
 
-### 🧠 Performance Insights & Error Analysis
+###  Performance Insights & Error Analysis
 
 * **Linguistic Distinctness:** The model achieves exceptional performance on authors with unique syntactic structures like **Hemingway** (short, declarative sentences) and **Woolf** (stream of consciousness), with F1-scores of **0.93** and **0.94** respectively.
 * **Political Domain Challenges:** The lower precision for **Bush (0.66)** compared to his recall **(0.84)** indicates a model bias where generic political rhetoric is sometimes misclassified as Bush. This highlights the linguistic proximity and shared "Presidential" vocabulary between figures like Obama and Bush.
@@ -73,7 +73,7 @@ The following metrics represent the final evaluation of the **ONNX-optimized Dis
 
 ---
 
-### 🏗️ Project Structure
+###  Project Structure
 
 ```text
 /

@@ -6,7 +6,6 @@ import numpy as np
 # 1. Page Configuration
 st.set_page_config(
     page_title="Source Predictor AI", 
-    page_icon="✍️", 
     layout="centered"
 )
 
@@ -30,7 +29,7 @@ except Exception as e:
     print(f"ERROR: Failed to load model. Details: {e}")
 
 # 3. User Interface
-st.title("✍️ Text Source Prediction System")
+st.title(" Text Source Prediction System")
 st.markdown("""
 This system analyzes the linguistic features of the input text to predict its origin (e.g., **Obama, Trump, Hemingway**).
 """)
